@@ -1,5 +1,8 @@
 <?php
 
+/**
+ * Convert Functions
+ */
 function convert_non_persian_chars_to_persian ($str) {
     //main goal: arabic chars: from ؀ U+0600 (&#1536;) to ۿ U+06FF (&#1791;)
     //source: https://unicode-table.com/en
@@ -299,6 +302,10 @@ function convert_non_persian_chars_to_persian ($str) {
     }
     return $str;
   }
+
+  /**
+   * Reverse Functions 
+   */
   function string_reverse_utf8 ($str){ 
       preg_match_all('/./us', $str, $ar); 
       return join('', array_reverse($ar[0])); 
